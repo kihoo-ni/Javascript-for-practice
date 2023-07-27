@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: 10px auto;
+      padding: 10px;
+    }
+    td{
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var memNum = parseInt(prompt("입장객은 몇 명 인가요?"));
+    var colNum = parseInt(prompt("한 줄에 몇 명씩 앉나요?"));
+
+
+    var rowNum;
+    if (memNum % colNum == 0) {
+      rowNum = parseInt(memNum / colNum);
+    } else {
+      rowNum = parseInt(memNum / colNum) + 1;
+    }
+    var i, j;
+    document.write("<table>");
+    for (i = 0; i <= rowNum; i++) { /
+      document.write("<tr>");
+      for (j = 1; j <= colNum; j++) {
+        seatNo = i * colNum + j; //seatNo앞에 var 붙이지 않아도됨. 알아서 넣어줌. 밖이나 안이나 변수앞에 var 안붙혀도 알아서 인식하나 써주는게 좋음 
+        // 좌석번호설정
+        if (seatNo > memNum) break; //좌석번호가 전체인원수 넘지 않도록 설정
+        document.write("<td>좌석 " + seatNo + "</td>");
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+  </script>
+</body>
+
+</html>

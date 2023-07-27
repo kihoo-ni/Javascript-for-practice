@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var id = "자바";
+    var password = "1234";
+
+    var user_id = prompt("아이디를 입력하세요.");
+    var user_password = prompt("비밀번호를 입력하세요.");
+    //아이디와 비번이 모두 맞으면 환영합니다 출력
+    //아이디는 맞는데 비번이틀리면 비번이 틀립니다. 출력 
+    //아이디가 맞지 않으면 존재하지 않는 아이디입니다. 출력 (중첩 if 문 사용)
+    //1차 조건문 아이디 확인 2차조건문 비밀번호 확인
+
+    if (user_id == id) {
+      if (user_password == password) {
+        alert("환영합니다");
+      } else {
+        alert("비번이 틀립니다.");
+        location.reload();
+      }
+    } else {
+      alert("존재하지 않는 아이디입니다."); /* alert 경고창 띄움 */
+      location.reload(); /* reload 새로고침 */
+    }
+
+
+  </script>
+</body>
+
+</html>

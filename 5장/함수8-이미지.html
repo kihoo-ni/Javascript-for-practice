@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #item {
+      position: relative;
+      width: 500px;
+      height: auto;
+      padding: 15px 20px;
+      margin: auto;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.8em;
+    }
+
+    .over {
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+    }
+
+    .detail {
+      width: 400px;
+      text-align: left;
+      line-height: 1.8;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="item">
+    <img src="images/수국.jpeg">
+    <!-- 그림파일 사이즈 400*300 -->
+    <button class="over" id="open" onclick="show()">상세 설명 보기</button>
+    <div id="desc" class="detail">
+      <h4>수국</h4>
+      <p>꽃말 : 냉정, 냉담과 무정,변덕, 변심.
+        <br>학명은 Hydrangea macrophylla이다.
+        <br>한반도·중국·일본 등의 동아시아 등지에 분포.
+      </p>
+      <button id="close" onclick="hide()">상세 설명 닫기</button>
+    </div>
+  </div>
+  <script>
+    function show() {
+      document.getElementById("desc").style.display="block";
+      document.getElementById("open").style.display="none";
+    }
+    function hide() {
+      document.getElementById("desc").style.display="none";
+      document.getElementById("open").style.display="block";
+    }
+  </script>
+</body>
+
+</html>

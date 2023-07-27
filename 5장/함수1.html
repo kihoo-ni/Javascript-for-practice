@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var count = 0;
+
+    myFnc(); //호이스팅으로 인해 뒤에 함수가 선언되어도 사용가능함.
+
+    function myFnc() {
+      count++;
+      document.write("안녕하세요" + count, "<br>");
+    }
+
+    myFnc();
+
+    // theFnc(); << 익명함수로 선언 되었기 때문에 호이스팅 지원안됨. 
+    var theFnc = function () {
+      count++;
+      document.write("byte" + count, "<br>");
+    }
+    theFnc();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    table {
+      margin: 0 auto;
+      width: 400px;
+    }
+
+    tr,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>이름</td>
+      <td id="name"></td>
+    </tr>
+    <tr>
+      <td>소속</td>
+      <td id="position"></td>
+    </tr>
+    <tr>
+      <td>선거구</td>
+      <td id="election"></td>
+    </tr>
+  </table>
+  <script>
+    var name = prompt("당신의 이름은?");
+    var address = prompt("당신의 주소는?");
+    var newadd = address.split(" ");
+
+    document.querySelector("#name").innerHTML = name;
+    document.querySelector("#position").innerHTML = newadd[0];
+    document.querySelector("#election").innerHTML = newadd[1]; // 쿼리셀렉터가 잡을수 있게끔 무조건 table보다 아래에 있어야 함.
+  </script>
+</body>
+
+</html>

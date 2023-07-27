@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>배열</title>
+</head>
+
+<body>
+  <script>
+    var arr_1 = ["사당", "교대", "방배", "강남"];
+    var arr_2 = ["신사", "압구정", "옥수"];
+
+    var result = arr_1.join("-"); // 배열 인덱스값에 넣어 연결시켜줌. 마지막값엔 안들어감.
+    document.write(result, "<br>");
+
+    result = arr_1.concat(arr_2); // concat 두개 배열 합침 
+    document.write(result, "<br>");
+
+    result = arr_1.slice(1, 3); //  1,3제외한 그사이값 출력 (인덱스랑관련없음)
+    document.write(result, "<br>");
+
+    arr_1.sort(); //오름차순 정렬
+    document.write(arr_1, "<br>");
+
+    arr_2.reverse(); //거꾸로 뒤집음
+    document.write(arr_2, "<br>");
+
+    arr_1.push("역삼"); //마지막에 넣음.
+    document.write(arr_1, "<br>");
+
+    arr_2.pop(); //마지막에 인덱스값 제거.
+    document.write(arr_2, "<br>");
+  </script>
+</body>
+
+</html>

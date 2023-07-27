@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      border-radius: 50%;
+      text-align: center;
+      border: 1px solid black;
+      background-color: yellow;
+    }
+
+    h1 {
+      margin: 100px 0;
+    }
+    #userNum{
+      font-size: 20px;
+    }
+    #matchNum{
+      font-size: 20px;
+    }
+    button{
+      font-size: 20px;
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mathNum">
+    <h1>숫자 맞추기 게임</h1>
+    <p id="userNum"></p>
+    <p id="matchNum"></p>
+    <button onclick="clearInterval(matchMath)">STOP</button>
+  </div>
+
+
+  <script>
+    var randomNum = Math.floor(Math.random() * 10) + 1;
+    document.querySelector("#userNum").innerHTML = "당신이 맞출 숫자 : " + randomNum;
+    var matchMath = setInterval(function () {
+      var randomNum1 = Math.floor(Math.random() * 10) + 1;
+      document.querySelector("#matchNum").innerHTML = randomNum1;
+    }, 500);
+
+  </script>
+
+</body>
+
+</html>

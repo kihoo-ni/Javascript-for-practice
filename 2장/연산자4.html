@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var writtenScore = parseInt(prompt("필기 점수는 ?"));
+    var practicalScore = parseInt(prompt("실기 점수는?"));
+    var average = (writtenScore + practicalScore) / 2;
+    if (average >= 90) {
+      document.write("당신의 등급은: 최우수");
+    } else if (average >= 80) {
+      document.write("당신의 등급은: 우수");
+    } else {
+      document.write("당신의 등급은: 일반");
+    }
+
+
+  </script>
+</body>
+
+</html>

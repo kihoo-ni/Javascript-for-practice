@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="clearInterval(auto_1)">중지</button>
+  <p id="num"></p>
+  <script>
+    var addNum=0;
+
+    var auto_1=setInterval(function(){
+      addNum++;
+      document.querySelector("#num").innerHTML=addNum;
+    },1000);
+  </script>
+
+</body>
+</html>

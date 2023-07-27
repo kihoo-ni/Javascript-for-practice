@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>반복문</title>
+  <style>
+    #red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    //1부터 100까지 숫자모두출력 3의배수는 빨강색 출력 
+    var j = 1;
+    sum = 0;
+    while (j <= 100) {
+      if (j % 3 == 0) {
+        document.write("<p id='red'>",j,"</p>"); //red는 작은따옴표로 하기. 반대로도가능하긴함. '<p id="red">'
+      } else {
+        document.write("<p>" + j + "</p>");
+      }
+      j++;
+    }
+  </script>
+</body>
+
+</html>
