@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var num = 0;
+    function sum() {
+      num++;
+      document.write(num, "<br>"); //재귀함수
+      if (num == 100) return;
+      sum();
+    }
+    sum();
+  </script>
+</body>
+
+</html>

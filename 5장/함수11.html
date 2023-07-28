@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function CheckWeight(name, height, weight) { //객체 생성자 함수 
+      this.userName = name;
+      this.userHeight = height;
+      this.userWeight = weight;
+      this.minWeight;
+      this.maxWeight;
+
+      this.getInfo = function () {
+        var str = "";
+        str += "이름 : " + this.userName + ", ";
+        str += "키 : " + this.userHeight + ", ";
+        str += "몸무게 : " + this.userWeight + ", ";
+        return str;
+      }
+
+    }
+    var hong = new CheckWeight("홍길동", 185, 80);
+    document.write(hong.getInfo());
+  </script>
+</body>
+
+</html>
