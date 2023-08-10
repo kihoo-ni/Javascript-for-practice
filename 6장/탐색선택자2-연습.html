@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main{
+      padding: 5px;
+      border: 5px solid black;
+      border-radius: 5px;
+    }
+    #main img{
+      width: 60px;
+      margin-bottom: 7px;
+    }
+    #main span{
+      display: inline-block;
+      padding: 5px;
+    }
+    
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function sli(t){
+      t.attr('src','images/huk2.gif');
+
+      setTimeout(function(){
+        t.attr('src','images/huk1.gif');},500);
+    }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="sli($('#main img').slice(1))">병장 밑으로 다 집합!</button>
+  <button type="button" onclick="sli($('#main img').slice(3))">상병 밑으로 다 집합!</button>
+  <button type="button" onclick="sli($('#main img').slice(5))">막내야!</button>
+  <div id="main">
+    <span><img src="images/huk1.gif"><br>병장</span>
+    <span><img src="images/huk1.gif"><br>상병</span>
+    <span><img src="images/huk1.gif"><br>상병</span>
+    <span><img src="images/huk1.gif"><br>일병</span>
+    <span><img src="images/huk1.gif"><br>일병</span>
+    <span><img src="images/huk1.gif"><br>이등병</span>
+  </div>
+</body>
+
+</html>

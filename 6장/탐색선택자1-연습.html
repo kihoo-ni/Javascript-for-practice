@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main{
+      padding: 10px;
+      width: 500px;
+      margin: 20px ;
+      border: 2px solid black;
+    }
+    img{
+      position: relative;
+      left: 0px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function remove(){
+      $('#main img:nth-child(1)').animate({left:'-=300', opacity:'0'},500, function(){
+        $(this).remove();
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <h1>첫번째 사람부터 내보내기</h1>
+  <button type="button" onclick="remove()">나가유</button>
+  <div id="main">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+  </div>
+</body>
+
+</html>
