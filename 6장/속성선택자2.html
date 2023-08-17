@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#wrap p:hidden").css({"display":"block","background" : "#ff0"});
+
+      var z1=$("#zone1 :selected").val(); //.val() << value값을 z1에 넣어줌  
+      console.log(z1);
+
+      $('#main [type=radio]').bind('click',test);
+
+      function test(){
+        var txt='';
+        txt=$('#main [type=radio]:checked').val(); //.val() << value값을 txt에 넣어줌
+        $("#main textarea").val(txt+"형"); //.val(txt+"형") << 괄호안의 값을 textarea에 넣어줌
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <h1>속성탐색 선택자</h1>
+  <div id="wrap">
+   <p>내용1</p>
+   <p style="display: none;">내용2</p>
+   <p>내용3</p>
+  </div>
+  <form action="#">
+    <p id="zone1">
+      <select name="course" id="course">
+        <option value="opt1">짜장</option>
+        <option value="opt2" selected>짬뽕</option>
+        <option value="opt3">탕수육</option>
+      </select>
+    </p>
+
+    <div id="main">
+      <b>당신의 혈액형은?</b><br>
+      <input type="radio" name="main" value="A">A<br>
+      <input type="radio" name="main" value="B">B<br>
+      <input type="radio" name="main" value="AB">AB<br>
+      <input type="radio" name="main" value="O">O<br>
+      <br>
+      <textarea></textarea>
+    </div>
+  </form>
+</body>
+
+</html>
