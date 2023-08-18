@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+
+
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+      var result_1=$("#sec_1").html();
+      $("#sec_3").html(result_1);
+      $("#sec_4").html("<h2>속성추가<h2>"); /* 원래요소값 지우고 새로추가함. */
+
+      var result_2=$("#sec_2").text();
+        $("#sec_3 h2").text(result_2);
+    });
+  </script>
+</head>
+
+<body>
+  <h1>
+    <strong>객체 조작 및 생성</strong>
+  </h1>
+  <section id="sec_1">
+    <h2>
+      <em>html()</em>
+    </h2>
+    <p>내용1</p>
+  </section>
+  <section id="sec_2">
+    <h2>
+      <em>텍스트()</em>
+    </h2>
+    <p>내용2</p>
+  </section>
+  <section id="sec_3">
+  </section>
+  <section id="sec_4">
+    <h1>김</h1>
+  </section>
+</body>
+
+</html>

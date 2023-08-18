@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 3px solid black;
+      width: 800px;
+      padding: 30px;
+      text-align: center;
+      margin: 100px auto;
+    }
+
+    #main img {
+      cursor: pointer;
+      margin: 0 5px;
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+   function animal1(){
+      $('#main').find(".chicken").animate({top:-100}, 200);
+      $('#main').find(".chicken").animate({top:0}, 200);
+    }
+   function animal2(){
+      $('#main').find(".cat").animate({top:-100}, 200);
+      $('#main').find(".cat").animate({top:0}, 200);
+    }
+   function animal3(){
+      $('#main').find(".dog").animate({top:-100}, 200);
+      $('#main').find(".dog").animate({top:0}, 200);
+    }
+   function animal4(){
+      $('#main').find(".bird").animate({top:-100}, 200);
+      $('#main').find(".bird").animate({top:0}, 200);
+    }
+
+
+  </script>
+</head>
+
+<body>
+  클릭한 동물을 점프시켜 봅시다!
+  <button type="button" onclick="animal1()">닭</button>
+  <button type="button" onclick="animal2()">고양이</button>
+  <button type="button" onclick="animal3()">개</button>
+  <button type="button" onclick="animal4()">새</button>
+  <div id="main">
+    <img class="chicken" src="images/bird17.gif">
+    <img class="cat" src="images/cat051.gif">
+    <img class="dog" src="images/shiba2.gif">
+    <img class="chicken" src="images/bird17.gif">
+    <img class="bird" src="images/bird30.gif">
+    <img class="dog" src="images/dog060.gif">
+    <img class="cat" src="images/cat051.gif">
+    <img class="dog" src="images/shiba2.gif">
+    <img class="cat" src="images/cat051.gif">
+  </div>
+</body>
+
+</html>

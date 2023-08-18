@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main{
+      border: 5px solid gray;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    #main .on {
+      background: blue;
+      border-radius: 50%;
+      border: 2px solid yellow;
+      padding: 5px;
+    }
+
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function button(){
+      $("#main span").has('img').addClass("on");
+      setTimeout(function() {
+        $("#main span").has("img").removeClass("on");
+      }, 1000);
+    }
+  </script>
+</head>
+
+<body>
+  span 요소 안에 이미지가 있는것을 찾아보세요.<br><br>
+    <button type="button" onclick="button()">누르기버튼</button>
+    <div id="main">
+      <span>
+        <img src="images/dog061.gif">
+      </span>
+        <img src="images/shiba2.gif">
+      <span>
+        귀요미 선생님!! 
+      </span>
+    </div>
+
+</body>
+
+</html>
