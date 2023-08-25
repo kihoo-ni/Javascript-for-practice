@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#main img").on({
+        "mouseover": function () {
+          $(this).attr("src", "images/huk2.gif");
+        },
+        "mouseout": function () {
+          $(this).attr("src", "images/huk1.gif");
+        }
+      });
+      /* $("#main img").hover(
+         function(){$(this).attr("src","images/huk2.gif");},
+         function(){$(this).css("src","images/huk2.gif");}
+        ); 두가지 방법 사용가능 */
+    });
+
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+    <img src="images/huk1.gif">
+  </div>
+</body>
+
+</html>

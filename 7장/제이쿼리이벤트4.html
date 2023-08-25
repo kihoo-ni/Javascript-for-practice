@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+     var h1=$(".img1").height(); //레디구문은 태그만 가져옴 대신 자기 컴퓨터에 있는것은 인식함. 
+     $("#a").text(h1);
+
+     $(window).load(function(){ //창에 있는것을 다가져옴 
+      var h2=$(".img1").height();
+      $("#b").text(h2);
+     });
+
+     var h3=$(".img2").height();  //레디구문은 태그만 가져옴 대신 자기 컴퓨터에 있는것은 인식함. 
+     $("#c").text(h3);
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+    <img src="http://place-hold.it/400x300" class="img1">
+  </p>
+  <h2 id="a"></h2>
+  <h2 id="b"></h2>
+  <p>
+    <img src="images/shiba2.gif" class="img2">
+  </p>
+  <h2 id="c"></h2>
+</body>
+
+</html>
