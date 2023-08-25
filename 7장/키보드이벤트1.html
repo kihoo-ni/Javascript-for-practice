@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(document).on("keydown",keyEventFnc);
+      function keyEventFnc(e){
+        switch(e.keyCode){
+          case 37:
+            $("#dora").animate({left:'-=10'},5);
+            break;
+          case 39:
+            $("#dora").animate({left:'+=10'},5);
+            break;
+          case 38:
+            $("#dora").animate({top:'-=10'},5);
+            break;
+          case 40:
+            $("#dora").animate({top:'+=10'},5);
+            break;
+            case 32:
+            $("#water").animate({top:'-=600'},1000);
+            $("#water").animate({top:'+=600'},1000);
+        }
+      }
+    }); 
+  
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .main{
+      margin: 50px auto;
+      width: 600px;
+      height: 600px;
+      border: 3px solid yellow;
+    }
+    .main_img{
+      background-image: url(images/background2.jpg);
+      background-size: 100% 100%;
+    }
+    #dora{
+      position: relative;
+      top: 450px;
+      left: 250px;
+    }
+    #water{
+      position: absolute;
+      bottom: 300px;
+      left: 900px;
+    }
+  </style>
+</head>
+
+<body>
+ <div class="main main_img">
+  <img src="images/dora8.png" width="100" height="140" id="dora" >
+  <img src="images/water1.png" width="40" height="40" id="water" >
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+
+      $("#user_id_1, #user_pw_1").on("focus",function(){
+        $(this).css("background","pink");
+      });
+
+      $("#user_id_1, #user_pw_1").on("blur",function(){
+        $(this).css("background","#fff");
+      });
+
+      $("#fm_2").on("focusin",function(){
+        $(this).css("background","pink");
+      });
+
+      $("#fm_2").on("focusout",function(){
+        $(this).css("background","#fff");
+      });
+
+    }); 
+  
+  </script>
+</head>
+
+<body>
+ <form action="#">
+  <P>
+    <label for="user_id_1">아이디1</label>
+    <input type="text" name="user_id_1" id="user_id_1">
+  </P>
+  <P>
+    <label for="user_pw_1">비밀번호1</label>
+    <input type="password" name="user_pw_1" id="user_pw_1">
+  </P>
+ </form>
+ <form action="#" id="fm_2">
+  <P>
+    <label for="user_id_2">아이디2</label>
+    <input type="text" name="user_id_2" id="user_id_2">
+  </P>
+  <P>
+    <label for="user_pw_2">비밀번호2</label>
+    <input type="password" name="user_pw_2" id="user_pw_2">
+  </P>
+ </form>
+</body>
+
+</html>

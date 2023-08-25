@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#rel_site").on("change", function(){
+        $(".txt").text($(":selected").val()); //this 대신 :selected 사용 가능
+      });
+    }); 
+    
+  
+  </script>
+  <style>
+    .txt{
+      display: block;
+      margin: 20px;
+      border: 3px solid blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <select id="rel_site">
+    <option value="">-선택-</option>
+    <option value="굿펠로우 나무타기 캥거루">굿펠로우 나무타기 캥거루</option>
+    <option value="당나귀">당나귀</option>
+    <option value="고양이">고양이</option>
+    <option value="말">말</option>
+    <option value="개">개</option>
+    <option value="쥐">쥐</option>
+    <option value="소">소</option>
+    <option value="꿩">꿩</option>
+  </select>
+  <textarea  class="txt" cols="50" rows="30"></textarea>
+</body>
+
+</html>
