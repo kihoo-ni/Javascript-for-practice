@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery_1.12.4_jquery.min.js"></script>
+    <script>
+        function animate() {
+            var ran1=Math.floor(Math.random()*5+1);
+            $("#bg1").css('left', '+=1.5');
+            if ($("#bg1").position().left >= 500) {
+                $("#bg1").css("left", "-600px");
+            }
+     
+            $("#bg2").css('left', '+=3');
+            if ($("#bg2").position().left >= 0) {
+                $("#bg2").css("left", "-500px");
+            }
+            $("#bg3").css('left', '+=20');
+            if ($("#bg3").position().left >= 0) {
+                $("#bg3").css("left", "-500px");
+            }
+            $("#bg4").css('left', '+=6');
+            if ($("#bg4").position().left >= 0) {
+                $("#bg4").css("left", "-500px");
+            }
+       
+
+            $("#sprite1").css('left', '-=' + ran1);
+            if ($("#sprite1").position().left < -100) {
+                $("#sprite1").css("left", "500px");
+            }
+
+            $("#sprite2").css('left', '-=10');
+            if ($("#sprite2").position().left < -100) {
+                $("#sprite2").css("left", "500px");
+            }
+
+            $("#sprite3").css('left', '-=5');
+            if ($("#sprite3").position().left < -100) {
+                $("#sprite3").css("left", "500px");
+            }
+        }
+        setInterval(animate, 50);
+
+
+
+
+    </script>
+    <style>
+        #screen {
+            background-image: url('images/land_bg.gif');
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            border: 2px solid black;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        #screen div {
+            position: absolute;
+            white-space: nowrap;
+        }
+
+        #bg1 {
+            top: 50px;
+            left: 0;
+        }
+
+        #bg2 {
+            top: 180px;
+            left: -500px;
+        }
+
+        #bg3 {
+            z-index: 5;
+            top: 220px;
+            left: -583px;
+        }
+
+        #bg4 {
+            z-index: 11;
+            top: 250px;
+            left: -500px;
+        }
+
+        #sprite1 {
+            z-index: 6;
+            top: 170px;
+            left: 380px;
+        }
+
+        #sprite2 {
+            z-index: 10;
+            top: 185px;
+            left: 200px;
+        }
+
+        #sprite3 {
+            z-index: 3;
+            top: 140px;
+            left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="bg1">
+            <img src="images/land04.gif" />
+        </div>
+        <div id="sprite3">
+            <img src="images/runner.gif" />
+        </div>
+        <div id="bg2">
+            <img src="images/land03.gif" /><img src="images/land03.gif" />
+        </div>
+        <div id="bg3">
+            <img src="images/land02.gif" /><img src="images/land02.gif" />
+        </div>
+        <div id="sprite1">
+            <img src="images/runner.gif" />
+        </div>
+        <div id="sprite2">
+            <img src="images/runner.gif" />
+        </div>
+        <div id="bg4">
+            <img src="images/land01.gif" /><img src="images/land01.gif" />
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#go").on("click", function () {
+        var pos = $("#snail").position();
+        $("#snail").animate(({ left: pos.left * -1 }), 10000);
+      });
+      $("#stop").on("click", function () {
+        $("#snail").stop();
+
+      });
+    });
+
+
+  </script>
+  <style>
+    #go {
+      position: absolute;
+      top: 450px;
+      left: 300px;
+    }
+
+    #stop {
+      position: absolute;
+      top: 450px;
+      left: 350px;
+    }
+
+    #snail {
+      position: absolute;
+      left: 600px;
+      top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sprite1">
+    <img id=snail src="images/runner.gif" />
+  </div>
+  <button id="go">go!</button>
+  <button id="stop">stop!</button>
+</body>
+
+</html>
