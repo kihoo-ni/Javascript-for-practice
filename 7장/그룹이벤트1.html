@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      //이벤트 등록 후에 생성된 요소에는 이벤트 등록이 안됨. btn_1.on <= 해당요소 존재하지 않음.
+      $(".btn_1.on").on("mouseover focus", function () {
+        alert("안녕하세요");
+      });
+      $(".btn_1").addClass("on");
+
+
+      $(document).on("mouseover focus", ".btn_2.on", function () {
+        alert("안녕하세요");
+      });
+      $(".btn_2").addClass("on");
+
+      $(".btn_3").on("click", function () {
+        $(".btn_3").css("color", "red");
+      });
+     
+    });
+
+
+  </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <p><button class="btn_1">버튼1</button></p>
+    <p><button class="btn_2">버튼2</button></p>
+    <p><button class="btn_3">버튼3</button></p>
+  </div>
+</body>
+
+</html>

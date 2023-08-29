@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#main img").on("click",function(){
+        $(this).slideUp(1000,"swing");
+      });
+      $("#bt").on("click",function(){
+        $("#main img").slideToggle(1000,"linear");
+      });
+    });
+  
+
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="images/snail.gif">
+    <img src="images/bird17.gif">
+    <img src="images/shiba2.gif">
+    <img src="images/dog061.gif">
+  </div>
+  <button id="bt">toggle</button>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn2").hide();
+
+      $(".btn1").on("click",function(){
+        $(".box").slideUp(1000,"linear",function(){
+          $(".btn1").hide();
+          $(".btn2").show();
+        })
+      });
+
+      $(".btn2").on("click",function(){
+        $(".box").fadeIn(1000,"swing",function(){
+          $(".btn2").hide();
+          $(".btn1").show();
+        })
+      });
+
+      $(".btn3").on("click",function(){
+        $(".box").slideToggle(1000,"linear");
+        });
+
+      $(".btn4").on("click",function(){
+        $(".box").fadeTo("fast",0.3);
+        });
+
+      $(".btn5").on("click",function(){
+        $(".box").fadeTo("fast",1);
+        });
+
+
+    });
+
+
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">슬라이드업</button>
+    <button class="btn2">페이드인</button>
+  </p>
+  <p>
+    <button class="btn3">토글슬라이드</button>
+  </p>
+  <p>
+    <button class="btn4">페이드투(0.3)</button>
+    <button class="btn5">페이드인(1)</button>
+  </p>
+  <div class="box">
+    <div class="content">
+      대구지법 서부지원 형사1부(부장 임동한)는 
+      유명 유튜버임을 내세워 지인들에게서 거액을 가로챈 혐의(특정경제범죄 가중처벌 등에 관한 법률상 사기 등)로 
+      기소된 유정호(30)씨에게 징역 2년 6개월을 선고했다고 28일 밝혔다.
+    </div>
+  </div>
+</body>
+
+</html>
